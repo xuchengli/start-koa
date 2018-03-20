@@ -1,0 +1,26 @@
+{
+  "name": "start-koa",
+  "version": "1.0.0",
+  "description": "It is for koa study",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuchengli/start-koa.git"
+  },
+  "author": "li xu cheng (lixucheng@aliyun.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xuchengli/start-koa/issues"
+  },
+  "homepage": "https://github.com/xuchengli/start-koa#readme",
+  "dependencies": {
+    "koa": "^2.5.0",
+    "log4js": "^2.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.0"
+  }
+}

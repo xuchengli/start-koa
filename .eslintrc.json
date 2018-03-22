@@ -38,6 +38,10 @@
             {
                 "code": 80
             }
+        ],
+        "eqeqeq": [
+            "error",
+            "smart"
         ]
     }
 }

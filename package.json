@@ -4,7 +4,10 @@
   "description": "It is for koa study",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --progress --hide-modules",
+    "start": "npm run build && node app",
+    "prod": "cross-env NODE_ENV=production npm start",
+    "dev": "cross-env NODE_ENV=development node app"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,10 @@
     "log4js": "^2.5.3"
   },
   "devDependencies": {
-    "eslint": "^4.19.0"
+    "cross-env": "^5.1.4",
+    "eslint": "^4.19.0",
+    "koa-webpack": "^3.0.2",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.12"
   }
 }

@@ -1,4 +1,4 @@
-class User {
+class UserModel {
     constructor() {
         this.data = [];
     }
@@ -12,4 +12,4 @@ class User {
         });
     }
 }
-module.exports = User;
+module.exports = UserModel;

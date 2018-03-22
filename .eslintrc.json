@@ -26,6 +26,18 @@
         "semi": [
             "error",
             "always"
+        ],
+        "camelcase": [
+            "error",
+            {
+                "properties": "always"
+            }
+        ],
+        "max-len": [
+            "error",
+            {
+                "code": 80
+            }
         ]
     }
 }

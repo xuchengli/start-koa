@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const log4js = require('log4js');
 const Router = require('koa-router');
-const user = require('./src/routes/user');
+const userRoute = require('./src/routes/UserRoute');
 
 const app = new Koa();
 const router = new Router();
@@ -42,7 +42,7 @@ logger.level = 'debug';
 //     ctx.body = { message: 'Hello World!' };
 // });
 
-router.prefix('/api').use(user.routes());
+router.prefix('/api').use(userRoute.routes());
 app.use(router.routes());
 
 app.listen(8080, () => {

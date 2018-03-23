@@ -5,11 +5,17 @@
         "es6": true,
         "node": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/recommended"
+    ],
     "parserOptions": {
         "ecmaVersion": 8,
         "sourceType": "module"
     },
+    "plugins": [
+        "vue"
+    ],
     "rules": {
         "indent": [
             "error",
@@ -42,6 +48,11 @@
         "eqeqeq": [
             "error",
             "smart"
-        ]
+        ],
+        "vue/html-indent": [
+            "error",
+            4
+        ],
+        "vue/max-attributes-per-line": "off"
     }
 }

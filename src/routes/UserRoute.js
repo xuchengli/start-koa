@@ -14,4 +14,12 @@ router.get('/', async ctx => {
         ctx.body = { users: 'no content' };
     }
 });
+router.get('/:id', async ctx => {
+    try {
+        ctx.body = await userModel.show(ctx.params.id);
+    } catch (err) {
+        ctx.status = 404;
+        ctx.body = { user: 'not exist' };
+    }
+});
 module.exports = router;

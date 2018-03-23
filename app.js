@@ -10,20 +10,26 @@ logger.level = 'debug';
 
 const env = process.env.NODE_ENV || 'production';
 
-if (env === 'development') {
-    const koaWebpack = require('koa-webpack');
-    const config = require('./webpack.config');
-    app.use(koaWebpack({
-        config: config,
-        dev: {
-            publicPath: config.output.publicPath,
-            stats: {
-                colors: true
-            }
-        }
-    }));
-}
 router.prefix('/api').use(userRoute.routes());
 app.use(router.routes());
 
-app.listen(8080, () => logger.info('Server started, listening on port 8080!'));
+app.listen(8080, function() {
+    logger.info('Server started, listening on port 8080!');
+    if (env === 'development') {
+        const koaWebpack = require('koa-webpack');
+        const config = require('./webpack.config');
+        app.use(koaWebpack({
+            config: config,
+            dev: {
+                publicPath: config.output.publicPath,
+                stats: {
+                    colors: true
+                },
+                logLevel: 'warn'
+            },
+            hot: {
+                server: this
+            }
+        }));
+    }
+});

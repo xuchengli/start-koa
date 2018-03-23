@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const production = process.env.NODE_ENV === 'production';
 
@@ -8,6 +9,11 @@ const config = {
         path: path.join(__dirname, 'public'),
         filename: production ? 'js/[name].[chunkhash].js' : 'js/bundle.js',
         publicPath: '/'
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html'
+        })
+    ]
 };
 module.exports = config;

@@ -4,7 +4,7 @@
   "description": "It is for koa study",
   "main": "app.js",
   "scripts": {
-    "lint": "eslint --ext .vue,.js .; exit 0",
+    "lint": "eslint --ext .vue,.js .",
     "build": "webpack --progress --hide-modules",
     "start": "npm run build && node app",
     "prod": "cross-env NODE_ENV=production npm start",

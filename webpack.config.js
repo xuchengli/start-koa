@@ -17,6 +17,14 @@ let config = {
     module: {
         rules: [
             {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    name: '[hash:6].[ext]',
+                    limit: 10000
+                }
+            },
+            {
                 test: /\.vue$/,
                 loader: 'vue-loader'
             }

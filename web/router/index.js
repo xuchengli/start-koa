@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import Home from '../components/home.vue';
 import UserList from '../components/user-list.vue';
 
 Vue.use(VueRouter);
@@ -7,8 +8,13 @@ Vue.use(VueRouter);
 const router = new VueRouter({
     routes: [
         {
-            name: 'UserList',
+            name: 'Home',
             path: '/',
+            component: Home
+        },
+        {
+            name: 'UserList',
+            path: '/users',
             component: UserList
         }
     ]

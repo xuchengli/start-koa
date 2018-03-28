@@ -1,10 +1,12 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import UserList from './components/user-list.vue';
+import router from './router';
+import index from './index.vue';
 
 Vue.use(Vuex);
 
 new Vue({
     el: '#app',
-    render: h => h(UserList)
+    router,
+    render: h => h(index)
 });
